@@ -17,6 +17,7 @@ import { UserModule } from './user/user.module';
       synchronize: true, 
       extra: {
         encrypt: true, 
+        trustServerCertificate: true
       },
     }),
     UserModule
