@@ -16,7 +16,7 @@ import { UserModule } from './user/user.module';
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true, 
       extra: {
-        encrypt: false, 
+        encrypt: true, 
       },
     }),
     UserModule
