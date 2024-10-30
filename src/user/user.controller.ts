@@ -11,6 +11,10 @@ export class UserController {
     if (!email || !password) {
       throw new BadRequestException('Email and password are required.');
     }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+    if (!email || !emailRegex.test(email)) {
+      throw new BadRequestException('Invalid email format.');
+    }
     return await this.userService.register(email, password);
   }
 }
